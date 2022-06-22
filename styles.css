@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    font-family:sans-serif;
+}
+.box-comments{
+    width: 95%;
+    margin:0 auto;
+}
+.box{
+    display: grid;
+    grid-template-areas: "img header option"
+                        " img comment comment"
+                        "img reactions recations"
+    ;
+    grid-template-rows: 50px auto 50px;
+    grid-template-columns: 50px 1fr 50px ;
+    grid-gap: 10px;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+.comment-image{
+    grid-area: img;
+}
+.comment-image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.comment-header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+.comment-container{
+    grid-area: comment;
+}
+.comment-title{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+}
+.comment-time{
+    color: rgba(82, 72, 72, 0.925);
+    font-size: 14px;
+    margin-left: 10px;
+}
+.comment-reactions{
+    grid-area: reactions;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: .8;
+  
+}
+.comment-cite{
+    margin-left: 10px;
+}
+.comment-like, .comment-cite, .comment-settings, .comment-image img, .comment-title{
+cursor: pointer;
+}
+.comment-like:hover, .comment-cite:hover{
+    color: rgb(89, 214, 6);
+}
+.comment-settings{
+    grid-area: option;
+    margin:auto;
+}
+.comment-title:hover{
+    transition-duration: 1s;
+    border-radius: 25px;
+    border: 1px solid silver;
+    color: rgb(89, 214, 6);
+}
